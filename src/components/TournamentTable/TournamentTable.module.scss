@@ -1,0 +1,209 @@
+@import "./../../assets/scss/index";
+
+.table {
+    @media only screen and (max-width: 990px) {
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
+    }
+    .wrapper {
+        @media only screen and (max-width: 990px) {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+
+    table {
+        min-width: 900px;
+        font-family: Ermilov;
+        font-weight: 700;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        @media only screen and (max-width: 990px) {
+            display: inline-block;
+        }
+
+        .head {
+            color: #fff;
+            font-size: 14px;
+            line-height: 135.714%;
+            letter-spacing: 0.14px;
+            background: $BASE;
+            height: 64px;
+
+            th {
+                span {
+                    display: block;
+                    width: min-content;
+                    margin: 0px auto;
+                }
+            }
+        }
+        .row {
+            height: 57px;
+            color: #202020;
+            font-size: 12px;
+            line-height: 133.333%;
+            letter-spacing: 0.6px;
+            background: #f7f8ff;
+            text-align: center;
+
+            &:nth-child(odd) {
+                background: rgba(255, 187, 84, 0.5);
+            }
+            .team {
+                @include flexbox;
+                align-items: center;
+
+                img {
+                    margin-right: 3px;
+                }
+
+                .right {
+                    @include flexbox;
+                    flex-direction: column;
+                    align-items: start;
+                }
+            }
+            .lastFive {
+                @include flexbox;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                span {
+                    background: #0fd400;
+                    border: 1.5px solid #0ec700;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    &.lose {
+                        background: #ee4d3e;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .calendar {
+        width: $container;
+        padding: 60px 90px 120px;
+        background: linear-gradient(110deg, #6d1ad7 0%, #ffad32 100%);
+        position: relative;
+        @media only screen and (max-width: 1360px) {
+            width: $containerMedium;
+        }
+        @media only screen and (max-width: 990px) {
+            width: $containerSmall;
+        }
+        @media only screen and (max-width: 780px) {
+            width: $containerExtraSmall;
+        }
+        @media only screen and (max-width: 600px) {
+            padding: 60px 60px 90px;
+        }
+        @media only screen and (max-width: 480px) {
+            padding: 60px 30px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            @media only screen and (max-width: 600px) {
+                width: 30px;
+                height: 30px;
+                top: 10px;
+                right: 10px;
+            }
+
+            span {
+                display: block;
+                position: relative;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-50%) rotate(45deg);
+                border: 3px solid #acacac;
+                border-radius: 50%;
+                @include anim(0.15s, 0s);
+                @media only screen and (max-width: 600px) {
+                    border: px solid #acacac;
+                }
+
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #acacac;
+                    border-radius: 5em;
+                    @include anim(0.15s, 0s);
+                }
+                &::after {
+                    width: 20px;
+                    height: 3px;
+                    @media only screen and (max-width: 600px) {
+                        width: 15px;
+                    }
+                }
+                &::before {
+                    height: 20px;
+                    width: 3px;
+                    @media only screen and (max-width: 600px) {
+                        height: 15px;
+                    }
+                }
+            }
+            &:hover {
+                span {
+                    border: 3px solid #ffffff;
+                    &::after,
+                    &::before {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    .button {
+        border-radius: 5px;
+        background: $BASE;
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 32px;
+        color: #fff;
+        font-family: Rubik;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0px auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        gap: 12px;
+        @include anim(0.13s, 0s);
+        &:hover {
+            background: $ACCENT;
+        }
+        svg {
+            transform: rotate(0);
+            @include anim(0.15s, 0s);
+        }
+
+        &.open {
+            background: $ACCENT;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

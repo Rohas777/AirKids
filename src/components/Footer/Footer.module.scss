@@ -1,0 +1,115 @@
+@import "./../../assets/scss/index";
+
+footer {
+    background-image: url("../../assets/image/footerWave.svg");
+    background-color: $BASE;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 275px;
+    flex: 0 0 auto;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    position: relative;
+
+    @media only screen and (max-width: 1360px) {
+        gap: 20px;
+    }
+    @media only screen and (max-width: 1225px) {
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 600px) {
+        flex-direction: row;
+        padding-top: 50px;
+        align-items: start;
+    }
+    @media only screen and (max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        top: 50%;
+        left: 16.5%;
+        transform: translate(-50%, -50%);
+
+        @media only screen and (max-width: 1440px) {
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            width: 83px;
+            height: 100px;
+
+            svg {
+                width: 83px;
+                height: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 1225px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+        @media only screen and (max-width: 600px) {
+            width: 66px;
+            height: 80px;
+            svg {
+                width: 66px;
+                height: 80px;
+            }
+        }
+    }
+
+    .links {
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1225px) {
+            margin-bottom: 30px;
+            align-items: start;
+        }
+
+        .frame {
+            width: 235px;
+            color: #fff;
+            text-align: center;
+            font-family: Rubik;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 100%;
+            @include flexbox;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            @media only screen and (max-width: 1440px) {
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 1360px) {
+                width: 185px;
+            }
+            @media only screen and (max-width: 1225px) {
+                font-size: 16px;
+                width: 135px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 13px;
+                width: 105px;
+                align-items: start;
+            }
+            @media only screen and (max-width: 375px) {
+                align-items: center;
+            }
+        }
+    }
+}

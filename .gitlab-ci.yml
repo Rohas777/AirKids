@@ -1,0 +1,49 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  TARGET_SERVER_PATH: /srv/build
+
+build_app:
+  only:
+    - dev
+  image: node:alpine
+  stage: build
+
+  script:
+    - echo "====== Install dependencied ======"
+    - npm i
+    - echo "====== Build react APP ======"
+    - CI=false npm run build 
+
+  artifacts:
+    name: panel-build
+    paths:
+      - build
+
+deploy_react:
+  only:
+    - dev
+  image: alpine
+  stage: deploy
+  before_script:
+    - chmod 400 $SSH_KEY
+  script:
+    - echo "====== Deploy to production server ======"
+
+    - apk update && apk upgrade
+    - apk add openssh bash rsync
+    - echo "====== Add target servers secret key ======"
+    
+    - mkdir ~/.ssh
+    - cat $SSH_KEY > ~/.ssh/id_rsa
+
+    - chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+
+    - echo "====== Test ssh connection ======"
+    
+    - ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -T "$TARGET_SERVER_USER_HOST"
+
+    - echo "====== Sync local and remote directory ======"
+    - rsync -azPq -O -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --delete ./build/ "$TARGET_SERVER_USER_HOST:$TARGET_SERVER_PATH"

@@ -1,0 +1,72 @@
+@import "./../../../assets/scss/index";
+
+.popupLink {
+    position: relative;
+    width: 100%;
+
+    &.active {
+        background-color: $ACCENT;
+    }
+
+    span {
+        z-index: 2;
+        background-color: inherit;
+        width: 100%;
+        height: 100%;
+        @include flexbox;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #fff;
+        overflow: hidden;
+
+        .link {
+            padding: 0;
+            height: 0;
+            opacity: 0;
+            width: 100%;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+
+            transition: height 0.07s ease-in, opacity 0.15s ease-in;
+            -webkit-transition: height 0.07s ease-in, opacity 0.15s ease-in;
+            -moz-transition: height 0.07s ease-in, opacity 0.15s ease-in;
+            -ms-transition: height 0.07s ease-in, opacity 0.15s ease-in;
+            -o-transition: height 0.07s ease-in, opacity 0.15s ease-in;
+            &:hover {
+                background-color: #dbdbdb;
+            }
+
+            a {
+                padding: 10px 0;
+                color: #000;
+                text-align: center;
+                font-family: Calibri;
+                font-size: 18px;
+                line-height: normal;
+                @media only screen and (max-width: 1440px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &.turnout {
+            .link {
+                height: $headerHeight;
+                opacity: 1;
+
+                @media only screen and (max-width: 1440px) {
+                    height: $headerHeightMedium;
+                }
+            }
+        }
+    }
+}

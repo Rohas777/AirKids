@@ -1,0 +1,50 @@
+[
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 1,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/1.png"
+    },
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 10,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/10.png"
+    },
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 19,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/19.png"
+    },
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 11,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/11.png"
+    },
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 21,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/21.png"
+    },
+    {
+        "fullName": "Пранаускис Виталиюс",
+        "number": 15,
+        "role": "Разыгрывающий",
+        "bornAt": "08.12.2002",
+        "height": "195 см",
+        "avatar": "/img/teams/players/15.png"
+    }
+]

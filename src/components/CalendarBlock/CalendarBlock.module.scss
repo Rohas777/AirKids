@@ -1,0 +1,263 @@
+@import "./../../assets/scss/index";
+
+.calendarBlock {
+    width: 100%;
+    font-family: Rubik;
+    color: #fff;
+    &.modal {
+        .dateSelector {
+            background-color: #ad5a8e;
+        }
+
+        .weakNames {
+            color: #fff;
+        }
+    }
+
+    .dateSelector {
+        background-color: $BASE;
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-radius: 8px;
+        padding: 7px 10px;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 7px;
+        text-transform: capitalize;
+        min-width: 220px;
+
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+        }
+
+        span {
+            font-size: 20px;
+            line-height: normal;
+            @media only screen and (max-width: 600px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .weakNames {
+        position: relative;
+        color: #909090;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.95;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px 4px;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 16px;
+        }
+
+        * {
+            padding-left: 5px;
+        }
+    }
+
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-auto-rows: 80px;
+        gap: 4px 4px;
+        @media only screen and (max-width: 600px) {
+            grid-auto-rows: 60px;
+        }
+
+        .day {
+            background-color: $BASE;
+            padding: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            // cursor: pointer;
+            position: relative;
+            @include anim(0.15s, 0s);
+            @media only screen and (max-width: 600px) {
+                padding: 8px 3px;
+                font-size: 16px;
+            }
+
+            .matchLink {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .cross {
+                position: absolute;
+                top: 2px;
+                left: 3px;
+                width: 28px;
+                height: 34px;
+            }
+
+            .match {
+                @include flexbox;
+                justify-content: center;
+                align-items: center;
+                gap: 22px;
+
+                .team {
+                    @include flexbox;
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-family: Rubik;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: normal;
+                    svg {
+                        width: 22px;
+                    }
+                }
+            }
+
+            &.selected {
+                // background-color: #cde844;
+            }
+
+            &.event {
+                background-color: $ACCENT;
+                @include anim(0.15s, 0s);
+                transform: scale(1);
+                z-index: 1;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffffff2b;
+                    opacity: 0;
+                    @include anim(0.1s, 0s);
+                }
+
+                &:hover {
+                    color: white;
+                    transform: scale(1.1);
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &.past {
+                background-color: #5511ab;
+
+                .match {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 33%;
+                        z-index: 10;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 7px;
+                        height: 3px;
+                        background-color: #909090;
+                    }
+                }
+
+                &.event {
+                    background-color: #c1842a;
+                }
+            }
+
+            &.additional {
+                background-color: #767676;
+            }
+        }
+    }
+
+    .monthes {
+        font-weight: 400;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 2px 2px;
+        font-size: 16px;
+        line-height: 1.2;
+
+        .month {
+            @include flexbox;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 0;
+            background-color: $BASE;
+            @include anim(0.15s, 0s);
+
+            &.selected {
+                border: 5px solid $ACCENT;
+                color: $ACCENT;
+            }
+
+            &:hover {
+                color: white;
+                background-color: #5511ab;
+            }
+
+            &.current {
+                background-color: $ACCENT;
+            }
+        }
+    }
+
+    .years {
+        font-weight: 400;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 2px 2px;
+        font-size: 16px;
+        line-height: 1.2;
+
+        .unchoosableYear {
+            background-color: #767676;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .year {
+            @include flexbox;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 0;
+            background-color: $BASE;
+            @include anim(0.15s, 0s);
+
+            &.selected {
+                border: 5px solid $ACCENT;
+                color: $ACCENT;
+            }
+
+            &:hover {
+                color: white;
+                background-color: #5511ab;
+            }
+
+            &.current {
+                background-color: $ACCENT;
+            }
+        }
+    }
+}

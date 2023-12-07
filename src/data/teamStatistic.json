@@ -1,0 +1,98 @@
+[
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    },
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    },
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    },
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    },
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    },
+    {
+        "team": {
+            "name": "ЦСКА",
+            "city": "Москва",
+            "logo": "/img/teamLogos/CSKA.png"
+        },
+        "games": 32,
+        "points": 62,
+        "SHB": 30,
+        "three-points": 2,
+        "assists": 94,
+        "rebounds": 23,
+        "interceptions": 36,
+        "BSH": 24,
+        "falls": 643
+    }
+]

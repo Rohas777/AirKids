@@ -1,0 +1,267 @@
+@import "./../../../assets/scss/index";
+
+.lineUp {
+    // @include flexbox;
+    @include flexbox;
+    padding: 0 40px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 990px) {
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 600px) {
+        padding: 0 10px;
+    }
+
+    .about {
+        width: 400px;
+        color: #000;
+        font-family: Rubik;
+
+        @media only screen and (max-width: 990px) {
+            width: 100%;
+        }
+
+        .head {
+            @include flexbox;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 13px;
+            position: relative;
+
+            @media only screen and (max-width: 990px) {
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media only screen and (max-width: 650px) {
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+            }
+            @media only screen and (max-width: 450px) {
+                flex-direction: column;
+            }
+
+            .image {
+                border-radius: 50%;
+                height: 129px;
+                width: 129px;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    @include anim(0.15s, 0s);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+
+                    &.height {
+                        height: 100%;
+                    }
+
+                    &.width {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .name {
+                @include flexbox;
+                flex-direction: column;
+                align-items: center;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1; /* 100% */
+                    margin-bottom: 7px;
+                    @media only screen and (max-width: 450px) {
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 133.333%; /* 133.333% */
+                    @media only screen and (max-width: 450px) {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .more {
+                @include flexbox;
+                align-items: center;
+                justify-content: space-between;
+                width: 150px;
+                height: 30px;
+                padding: 0 20px;
+                margin-left: 50px;
+                border-radius: 5px;
+                border: 1px solid #acacac;
+                @include anim(0.15s, 0s);
+
+                @media only screen and (max-width: 650px) {
+                    margin-left: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    width: 90%;
+                    transform: translateX(-50%);
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 133.333%;
+                    color: #acacac;
+                    @include anim(0.15s, 0s);
+                }
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    transform: rotate(0);
+                    @include anim(0.15s, 0s);
+                    path {
+                        fill: #acacac;
+                        @include anim(0.15s, 0s);
+                    }
+                }
+
+                &.active {
+                    border: 1px solid #000;
+                    p {
+                        color: #000;
+                    }
+                    svg {
+                        transform: rotate(180deg);
+                        path {
+                            fill: #000;
+                        }
+                    }
+                }
+            }
+        }
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 133.333%; /* 133.333% */
+        }
+
+        .description {
+            .desc {
+                margin-bottom: 25px;
+            }
+
+            @media only screen and (max-width: 990px) {
+                @include anim(0.15s, 0s);
+                overflow: hidden;
+                max-height: 0;
+                opacity: 0;
+
+                .desc {
+                    margin-bottom: 0;
+                    @include anim(0.15s, 0s);
+                }
+
+                span {
+                    margin-bottom: 0;
+                    @include anim(0.15s, 0s);
+                }
+
+                &.open {
+                    max-height: 7000px;
+                    opacity: 1;
+
+                    .desc {
+                        margin-bottom: 25px;
+                        @include anim(0.15s, 0s);
+                    }
+                }
+            }
+        }
+    }
+
+    .players {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0px auto;
+        @media only screen and (max-width: 1360px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (max-width: 990px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media only screen and (max-width: 780px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            @include flexbox;
+            flex-direction: column;
+        }
+
+        .playerCreate {
+            width: 194px;
+            min-height: 245px;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+            @include anim(0.2s, 0s);
+            background-color: #e9e9e9;
+
+            span {
+                background-color: #fff;
+                border-radius: 50%;
+                width: 130px;
+                height: 130px;
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 2px;
+                    @include anim(0.2s, 0s);
+                    background-color: #bdbdbd;
+                }
+
+                &::after {
+                    width: 50%;
+                    height: 5px;
+                }
+                &::before {
+                    height: 50%;
+                    width: 5px;
+                }
+            }
+
+            &:hover {
+                background: green;
+                color: #fff;
+
+                span {
+                    &::after,
+                    &::before {
+                        background-color: green;
+                    }
+                }
+            }
+        }
+    }
+}

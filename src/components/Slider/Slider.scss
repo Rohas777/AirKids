@@ -1,0 +1,102 @@
+@import "./../../assets/scss/index";
+
+.slider {
+    img {
+        width: 100%;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 290px;
+        height: 100%;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            width: 25px;
+            height: 50px;
+            background-image: url("./../../../public/img/arrowLeft.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 290px;
+        height: 100%;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            width: 25px;
+            height: 50px;
+            background-image: url("./../../../public/img/arrowRight.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.6;
+        cursor: auto;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        z-index: 2;
+        bottom: 20px;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .swiper-pagination-bullet {
+        display: block;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        border: 0.5px white solid;
+        @include anim(0.3s, 0s);
+
+        &-active {
+            background-color: #fff;
+        }
+
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 10px;
+        //     height: 10px;
+        //     border-radius: 10px;
+        //     background-color: #fff;
+        //     transform: scale(0);
+        //     @include anim(0.3s,0s);
+        // }
+
+        // &.swiper-pagination-bullet-active::before{
+        //     transform: scale(1);
+        // }
+    }
+}

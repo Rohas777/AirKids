@@ -1,0 +1,77 @@
+@import "./../../assets/scss/index";
+
+.tournamentCell {
+    width: 237px;
+
+    .head {
+        color: #333;
+        font-weight: 600;
+        line-height: 1.2;
+        text-transform: uppercase;
+        justify-content: center;
+        background: #edeff9;
+    }
+
+    .date {
+        color: #a4a4a4;
+        font-family: Calibri;
+        font-size: 10px;
+        line-height: 2.2;
+        letter-spacing: 0.2px;
+        span {
+            font-style: italic;
+        }
+    }
+
+    li {
+        border: 1px solid #000;
+        @include flexbox;
+        align-items: center;
+        gap: 5px;
+        color: #202020;
+        font-family: Rubik;
+        font-size: 12px;
+        line-height: 1.416;
+        // line-height: 208.333%;
+        font-weight: 600;
+        height: 25px;
+
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+        p {
+            flex: 1 1;
+            letter-spacing: 0.3px;
+        }
+        span {
+            text-align: center;
+            letter-spacing: 0.6px;
+            width: 30px;
+        }
+    }
+    .winner {
+        background: rgba(109, 26, 215, 0.3);
+        font-weight: 800;
+    }
+}
+
+.tournamentCell.bronze {
+    .date {
+        border-left: 1px solid #e1e1e1;
+        border-right: 1px solid #e1e1e1;
+        padding-left: 12px;
+    }
+
+    li {
+        border: 1px solid #e1e1e1;
+
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+    }
+}

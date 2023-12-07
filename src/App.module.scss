@@ -1,0 +1,23 @@
+@import "./assets/scss/index";
+
+.App {
+    height: 100%;
+    width: 100%;
+    color: $TEXT;
+    background-color: $BACKGROUND;
+    @include flexbox;
+    flex-direction: column;
+}
+
+.wrapper {
+    // margin: 0px auto;
+    // height: 100vh;
+    // @include flexbox;
+    // flex-direction: column;
+    flex: 1 0 auto;
+
+    .someDiv {
+        background: linear-gradient(0deg, #909090 0%, #909090 100%), #fff;
+        height: 424px;
+    }
+}

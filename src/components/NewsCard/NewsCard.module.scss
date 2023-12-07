@@ -1,0 +1,90 @@
+@import "./../../assets/scss/index";
+
+.newsCard {
+    height: 414px;
+    width: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include anim(0.3s, 0s);
+    background-color: $BACKGROUND;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1360px) {
+        width: 295px;
+    }
+    @media only screen and (max-width: 990px) {
+        width: 100%;
+    }
+
+    &.gray {
+        background-color: #ccc;
+    }
+
+    &:hover {
+        background-color: $BASE;
+        .image {
+            img {
+                transform: translate(-50%, -50%) scale(1.01);
+            }
+        }
+        .description {
+            color: #fff;
+            i {
+                color: #fff;
+            }
+        }
+    }
+
+    .image {
+        height: 277px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            @include anim(0.15s, 0s);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+
+            &.height {
+                height: 100%;
+            }
+
+            &.width {
+                width: 100%;
+            }
+        }
+    }
+
+    .description {
+        padding: 7px 6px;
+        color: #000;
+        font-family: Calibri;
+        width: 100%;
+        line-height: normal;
+        @include flexbox;
+        flex-direction: column;
+        @include anim(0.3s, 0s);
+
+        i {
+            align-self: end;
+            @include anim(0.3s, 0s);
+            color: #898989;
+            font-size: 11px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+}

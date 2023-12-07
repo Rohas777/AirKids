@@ -1,0 +1,135 @@
+@import "./../../assets/scss/index";
+
+.TeamPage {
+    margin-top: calc($headerHeight + 18px);
+    background: #f2f2f2;
+
+    .container {
+        width: $container;
+        margin: 0px auto;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (max-width: 1360px) {
+            width: $containerMedium;
+        }
+        @media only screen and (max-width: 990px) {
+            width: $containerSmall;
+        }
+        @media only screen and (max-width: 780px) {
+            width: $containerExtraSmall;
+        }
+    }
+
+    .schedule {
+        margin-bottom: 18px;
+    }
+
+    .wrapper {
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 15px 0px #ccc;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+
+        .header {
+            padding: 0 50px;
+            background-color: $BASE;
+            @include flexbox;
+            gap: 30px;
+            margin-bottom: 15px;
+            position: relative;
+
+            @media only screen and (max-width: 650px) {
+                padding: 0;
+                display: block;
+            }
+
+            .edit {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                @include flexbox;
+                gap: 5px;
+
+                span {
+                    cursor: pointer;
+                    width: 35px;
+                    height: 35px;
+                    @include flexbox;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    @include anim(0.1s, 0s);
+                    background-color: #c9c9c9;
+
+                    svg {
+                        @include anim(0.1s, 0s);
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    &:hover {
+                        background-color: $ACCENT;
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                    &.delete {
+                        &:hover {
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                color: #fff;
+                text-align: center;
+                font-family: Rubik;
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 0.8;
+                padding: 19px 8px;
+                @include anim(0.1s, 0s);
+                cursor: pointer;
+
+                @media only screen and (max-width: 990px) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: 450px) {
+                    font-size: 18px;
+                    padding: 15px 8px;
+                }
+
+                &:hover {
+                    background: #5511ab;
+                }
+
+                &:active {
+                    background-color: $ACCENT;
+                }
+
+                &.active {
+                    background-color: $ACCENT;
+                }
+            }
+        }
+
+        .calendar {
+            width: 960px;
+            padding: 0 20px;
+            margin: 0px auto;
+            @media only screen and (max-width: 1360px) {
+                width: 100%;
+            }
+            @media only screen and (max-width: 990px) {
+                width: 100%;
+            }
+            @media only screen and (max-width: 780px) {
+                width: 100%;
+            }
+        }
+    }
+}

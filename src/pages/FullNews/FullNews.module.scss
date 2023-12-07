@@ -1,0 +1,162 @@
+@import "./../../assets/scss/index";
+
+.fullNews {
+    margin-top: calc($headerHeight + 18px);
+    background: #f2f2f2;
+
+    .container {
+        width: 1300px;
+        margin: 0px auto;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+
+        @media only screen and (max-width: 1360px) {
+            width: $containerMedium;
+        }
+        @media only screen and (max-width: 990px) {
+            width: $containerSmall;
+        }
+        @media only screen and (max-width: 780px) {
+            width: $containerExtraSmall;
+        }
+    }
+
+    .schedule {
+        margin-bottom: 52px;
+        @media only screen and (max-width: 990px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+        @include flexbox;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        @media only screen and (max-width: 1360px) {
+            flex-direction: column-reverse;
+        }
+
+        aside {
+            @media only screen and (max-width: 1360px) {
+                height: 150px;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: 780px) {
+                margin: 0 20px;
+            }
+        }
+
+        .post {
+            background: #fff;
+            box-shadow: 0px 0px 15px 0px #ccc;
+            padding: 60px 31px 44px;
+            position: relative;
+            width: 75%;
+
+            @media only screen and (max-width: 1360px) {
+                width: 100%;
+            }
+            @media only screen and (max-width: 990px) {
+                padding: 30px 20px 44px;
+            }
+
+            .edit {
+                position: absolute;
+                top: 20px;
+                right: 15px;
+                @include flexbox;
+                gap: 5px;
+
+                span {
+                    cursor: pointer;
+                    width: 35px;
+                    height: 35px;
+                    @include flexbox;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    @include anim(0.1s, 0s);
+                    svg {
+                        @include anim(0.1s, 0s);
+                        width: 25px;
+                        height: 25px;
+                    }
+
+                    &:hover {
+                        background-color: $ACCENT;
+                        svg {
+                            fill: #fff;
+                        }
+                    }
+                    &.delete {
+                        &:hover {
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+
+            h1 {
+                color: #000;
+                font-family: Calibri;
+                font-size: 24px;
+                line-height: normal;
+                font-weight: 700;
+                margin-bottom: 49px;
+                word-wrap: break-word;
+                @media only screen and (max-width: 990px) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            p {
+                color: #000;
+                font-family: Calibri;
+                font-size: 18px;
+                line-height: normal;
+                font-weight: 300;
+                word-wrap: break-word;
+                margin-bottom: 57px;
+                @media only screen and (max-width: 990px) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            img {
+                margin: 0px auto;
+
+                &.height {
+                    height: 100%;
+                }
+
+                &.width {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.message {
+    height: 100vh;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Ermilov;
+    font-size: 36px;
+    line-height: normal;
+    font-weight: 300;
+}

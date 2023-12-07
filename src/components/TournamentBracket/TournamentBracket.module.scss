@@ -1,0 +1,68 @@
+@import "./../../assets/scss/index";
+
+.TournamentBracket {
+    @media only screen and (max-width: 990px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
+    }
+}
+
+.wrapper {
+    @media only screen and (max-width: 990px) {
+        display: inline-block;
+    }
+}
+
+.header {
+    @include flexbox;
+    align-items: center;
+    gap: 48.5px;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 1360px) {
+        gap: 30px;
+    }
+
+    li {
+        @include flexbox;
+        height: 25px;
+        background: $ACCENT;
+        border: 1px solid #e1e1e1;
+        color: #fff;
+        font-family: Rubik;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2; /* 120% */
+        text-transform: uppercase;
+        width: 237px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.round {
+    @include flexbox;
+    align-items: center;
+    gap: 48.5px;
+
+    @media only screen and (max-width: 1360px) {
+        gap: 30px;
+    }
+}
+
+.body > li > ul > li > ul > li > ul {
+    margin-bottom: 12px;
+}
+
+.body {
+    @include flexbox;
+    flex-direction: column;
+    align-items: end;
+
+    .bronze {
+        margin-top: 27px;
+    }
+}

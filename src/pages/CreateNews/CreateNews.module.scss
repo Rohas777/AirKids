@@ -1,0 +1,188 @@
+@import "./../../assets/scss/index";
+
+.fullNews {
+    margin-top: calc($headerHeight + 18px);
+    background: #f2f2f2;
+
+    .container {
+        width: $container;
+        margin: 0px auto;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        width: $container;
+        margin-bottom: 20px;
+
+        .post {
+            background: #fff;
+            box-shadow: 0px 0px 15px 0px #ccc;
+            padding: 60px 31px 44px;
+            @include flexbox;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                width: 100%;
+                margin-bottom: 30px;
+                color: #2e2e2e;
+                font-family: Rubik;
+                font-size: 20px;
+                font-weight: 700;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .name {
+                width: 100%;
+                margin-bottom: 30px;
+                color: #000;
+                font-family: Calibri;
+                font-size: 20px;
+                line-height: normal;
+                padding: 5px 10px;
+                font-weight: 700;
+                border-radius: 5px;
+                border: 1px solid #858585;
+                @include anim(0.15s, 0s);
+                opacity: 0.7;
+
+                &:active,
+                &:focus {
+                    border: 1px solid #000;
+                    opacity: 1;
+                }
+
+                &::placeholder {
+                    font-weight: 400;
+                    font-size: 18px;
+                    opacity: 0.7;
+                }
+            }
+
+            .description {
+                width: 100%;
+                height: 300px;
+                color: #000;
+                font-family: Calibri;
+                font-size: 18px;
+                line-height: normal;
+                font-weight: 300;
+                margin-bottom: 40px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #858585;
+                @include anim(0.15s, 0s);
+                opacity: 0.7;
+
+                &:active,
+                &:focus {
+                    border: 1px solid #000;
+                    opacity: 1;
+                }
+
+                &::placeholder {
+                    opacity: 0.7;
+                }
+            }
+
+            .file {
+                width: 100%;
+                margin-bottom: 30px;
+                @include flexbox;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                input {
+                    width: 30%;
+                }
+
+                .preview {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 1;
+                    cursor: pointer;
+                    transition: opacity 0.07s ease-in;
+                    -webkit-transition: opacity 0.07s ease-in;
+                    -moz-transition: opacity 0.07s ease-in;
+                    -ms-transition: opacity 0.07s ease-in;
+                    -o-transition: opacity 0.07s ease-in;
+                    position: relative;
+
+                    span {
+                        display: none;
+                        width: 100px;
+                        height: 100px;
+                        position: relative;
+                        top: -100%;
+                        transform: rotate(45deg);
+                        &::after,
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: red;
+                            border-radius: 5em;
+                        }
+                        &::after {
+                            width: 40px;
+                            height: 5px;
+                        }
+                        &::before {
+                            height: 40px;
+                            width: 5px;
+                        }
+                    }
+                    &:hover {
+                        opacity: 0.7;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 35px;
+                border-radius: 5px;
+                color: #000;
+                font-family: Calibri;
+                font-size: 16px;
+                line-height: normal;
+                padding: 5px 10px;
+                font-weight: 700;
+                @include anim(0.15s, 0s);
+                background-color: rgb(84, 234, 46);
+                margin-bottom: 10px;
+                opacity: 0.7;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &.cancel {
+                    background-color: rgba(212, 46, 46, 0.827);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.message {
+    height: 100vh;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Ermilov;
+    font-size: 36px;
+    line-height: normal;
+    font-weight: 300;
+}

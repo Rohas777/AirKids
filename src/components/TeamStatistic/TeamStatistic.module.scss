@@ -1,0 +1,81 @@
+@import "./../../assets/scss/index";
+
+.table {
+    overflow: auto;
+    border-radius: 4px;
+    border: 1px solid #b9b9b9;
+
+    table {
+        font-family: Rubik;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        overflow: hidden;
+
+        tr {
+            border-bottom: 1px solid #b9b9b9;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+        th,
+        td {
+            border-right: 1px solid #b9b9b9;
+
+            &:last-of-type {
+                border-right: none;
+            }
+        }
+
+        .head {
+            color: #fff;
+            background: $BASE;
+            height: 36px;
+
+            th {
+                span {
+                    text-align: left;
+                    display: block;
+                    padding: 0px 12px;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%;
+                }
+            }
+        }
+        .row {
+            height: 46px;
+            color: #000;
+            font-size: 12px;
+            letter-spacing: 0.6px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+
+            td {
+                padding: 0px 12px;
+            }
+
+            &:nth-child(odd) {
+                background: rgba(255, 187, 84, 0.5);
+            }
+            .team {
+                @include flexbox;
+                align-items: center;
+
+                img {
+                    margin-right: 3px;
+                }
+
+                .right {
+                    @include flexbox;
+                    flex-direction: column;
+                    align-items: start;
+                }
+            }
+        }
+    }
+}

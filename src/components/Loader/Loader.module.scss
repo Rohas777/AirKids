@@ -1,0 +1,47 @@
+@import "./../../assets/scss/index";
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.loader {
+    overflow: hidden;
+    height: 100vh;
+    @include flexbox;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: Ermilov;
+    font-size: 36px;
+    line-height: normal;
+    font-weight: 300;
+
+    .wrapper {
+        transform: translateY(-20px);
+        animation: bounce 0.8s ease-out infinite;
+
+        img {
+            transform: rotate(0deg);
+            animation: rotate 0.8s ease-in-out infinite;
+            height: 100px;
+            width: 100px;
+        }
+    }
+}

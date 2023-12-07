@@ -1,0 +1,132 @@
+@import "./../../assets/scss/index";
+
+.schedule {
+    width: calc($container + 32px);
+    @include flexbox;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+    @media only screen and (max-width: 1360px) {
+        width: calc($containerMedium + 32px);
+    }
+    @media only screen and (max-width: 990px) {
+        width: calc($containerSmall + 32px);
+    }
+    @media only screen and (max-width: 780px) {
+        width: calc(($containerExtraSmall + 32px) - 40px);
+    }
+
+    // margin: 30px 0px;
+
+    .swiper {
+        position: relative;
+        width: 100%;
+        padding: 0px 15px;
+
+        @media only screen and (max-width: 990px) {
+            // left: 4px;
+        }
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 2px;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        @include anim(0.3s, 0s);
+
+        &::after {
+            content: "";
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(-135deg);
+            width: 11px;
+            height: 11px;
+            border-top: 2px solid #000;
+            border-right: 2px solid #000;
+            // margin-right: 11px;
+        }
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        @include anim(0.3s, 0s);
+
+        &::after {
+            content: "";
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            right: 0;
+            width: 11px;
+            height: 11px;
+            border-top: 2px solid #000;
+            border-right: 2px solid #000;
+            // margin-right: 11px;
+        }
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.3;
+        cursor: auto;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        z-index: 2;
+        bottom: 20px;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .swiper-pagination-bullet {
+        display: block;
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        border: 0.5px white solid;
+        @include anim(0.3s, 0s);
+
+        &-active {
+            background-color: #fff;
+        }
+
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 10px;
+        //     height: 10px;
+        //     border-radius: 10px;
+        //     background-color: #fff;
+        //     transform: scale(0);
+        //     @include anim(0.3s,0s);
+        // }
+
+        // &.swiper-pagination-bullet-active::before{
+        //     transform: scale(1);
+        // }
+    }
+}

@@ -1,0 +1,56 @@
+@import "./../../../assets/scss/index";
+
+.headerItem {
+    .head {
+        cursor: pointer;
+        font-size: 20px;
+        font-family: Rubik;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: normal;
+        @include flexbox;
+        justify-content: center;
+        @include anim(0.15s, 0s);
+        height: $headerHeightMedium;
+        align-items: center;
+
+        &.open {
+            background-color: $ACCENT;
+        }
+    }
+
+    .body {
+        width: 100%;
+        margin: 0px auto;
+        font-size: 20px;
+        font-family: Rubik;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        @include flexbox;
+        flex-direction: column;
+        background-color: #e3e3e3;
+        box-shadow: inset 0px 0px 15px 0px #ccc;
+        @include anim(0.15s, 0s);
+
+        a {
+            height: 0;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            @include anim(0.15s, 0s);
+        }
+
+        &.open {
+            max-height: 7000px;
+            a {
+                height: $headerHeightMedium;
+                opacity: 1;
+            }
+        }
+    }
+}

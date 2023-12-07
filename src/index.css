@@ -1,0 +1,23 @@
+/*Adaptive debug*/
+/* *{
+    outline: 1px solid lightgreen;
+}  */
+
+html, body{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root{
+  height: 100%;
+}

@@ -1,0 +1,31 @@
+@import "./../../assets/scss/index";
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    @include anim(0.25s, 0s);
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .content {
+        transform: scale(0);
+        @include anim(0.25s, 0s);
+
+        &.active {
+            transform: scale(1);
+        }
+    }
+}

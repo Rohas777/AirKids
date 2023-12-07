@@ -1,0 +1,20 @@
+[
+    {
+        "place": 1, "name": "ЦСКА", "city": "Москва", "games": 32, "victories": 30, "defeats": 2, "winRate": 94, "lastFive": [1, 1, 1, 1, 1], "scored": 3060, "missed": 2417, "difference": 643, "points": 62, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 2, "name": "УНИКС", "city": "Казань", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [0, 0, 1, 0, 0], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/UNIX.png"
+    },
+    {
+        "place": 3, "name": "Зенит", "city": "Санкт-Петербург", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 0, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/ZENIT.png"
+    },
+    {
+        "place": 4, "name": "Пари Нижний Новгород", "city": "Нижний Новгород", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 0, 0, 0], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/PARI-nizniy-novgorod.png"
+    },
+    {
+        "place": 5, "name": "Локомотив-Кубань", "city": "Краснодар", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 0, 0, 1, 0], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/LOKOMORIV-kuban.png"
+    },
+    {
+        "place": 6, "name": "МБА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [0, 0, 1, 0, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/MBA.png"
+    }
+]

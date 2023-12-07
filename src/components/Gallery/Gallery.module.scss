@@ -1,0 +1,92 @@
+@import "./../../assets/scss/index";
+
+.gallery {
+    width: 100%;
+
+    h1 {
+        color: #333;
+        font-family: Rubik;
+        font-size: 25.2px;
+        font-weight: 700;
+        line-height: 142.857%;
+        margin-bottom: 36px;
+    }
+
+    .modalImage {
+        min-width: 300px;
+        min-height: 200px;
+        max-width: 50vw;
+        max-height: 70vh;
+    }
+
+    .grid {
+        @include flexbox;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        .image {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            width: 49%;
+
+            &:first-of-type {
+                img {
+                    width: 100%;
+                }
+            }
+
+            img {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                @include anim(0.15s, 0s);
+                transform: translate(-50%, -50%) scale(1);
+
+                &.height {
+                    height: 100%;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: translate(-50%, -50%) scale(1.01);
+                }
+            }
+
+            @media only screen and (max-width: 1360px) {
+                width: 49%;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    &:hover {
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                }
+            }
+            @media only screen and (max-width: 990px) {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .picture {
+            img {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                @include anim(0.15s, 0s);
+            }
+        }
+    }
+}

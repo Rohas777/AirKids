@@ -1,0 +1,232 @@
+@import "./../../assets/scss/index";
+
+header {
+    height: $headerHeight;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+
+    @media only screen and (max-width: 1440px) {
+        height: $headerHeightMedium;
+    }
+
+    .container {
+        height: 100%;
+        margin: 0px auto;
+        position: relative;
+        background-color: $BASE;
+
+        @media only screen and (max-width: 1225px) {
+            z-index: 3;
+        }
+    }
+
+    .links {
+        margin: 0px auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1140px;
+        height: 100%;
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 1225px) {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            left: 50%;
+            top: -700%;
+            z-index: 2;
+            overflow: auto;
+            background-color: #fff;
+            @include anim(0.4s, 0s);
+
+            &.open {
+                transform: translate(-50%, 0);
+                top: $headerHeightMedium;
+                padding-bottom: $headerHeightMedium;
+            }
+        }
+
+        .link {
+            height: 100%;
+            width: 167px;
+            @include flexbox;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            @include anim(0.13s, 0s);
+            position: relative;
+            font-size: 20px;
+            font-family: Rubik;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 3;
+            @include anim(0.13s, 0s);
+
+            @media only screen and (max-width: 1440px) {
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 1360px) {
+                width: 147px;
+            }
+            @media only screen and (max-width: 1225px) {
+                @include flexbox;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: $headerHeightMedium;
+                background-color: #fff;
+                color: #000;
+            }
+            @media only screen and (max-width: 600px) {
+                font-size: 16px;
+            }
+
+            &.active {
+                background-color: $ACCENT;
+            }
+
+            &:hover {
+                background-color: $ACCENT;
+                color: #fff;
+                p {
+                    top: 1px;
+                    left: 1px;
+                }
+            }
+            &.logo {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -5%;
+                width: 50px;
+                height: 60px;
+                svg {
+                    width: 50px;
+                    height: 60px;
+                }
+                @media only screen and (max-width: 1440px) {
+                    svg {
+                        width: 43px;
+                        height: 50px;
+                    }
+                }
+
+                @media only screen and (max-width: 1360px) {
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .outsideLogo {
+        position: absolute;
+        top: $headerHeightMedium / 2;
+        transform: translateY(-50%);
+        left: 50px;
+        width: 50px;
+        height: 60px;
+        @include flexbox;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: 600px) {
+            left: 15px;
+        }
+
+        img {
+            width: 37.5px;
+            height: 45px;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .ham {
+        position: absolute;
+        top: 0;
+        right: 50px;
+
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 300ms;
+        -webkit-transition: transform 300ms;
+        -moz-transition: transform 300ms;
+        -ms-transition: transform 300ms;
+        -o-transition: transform 300ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @media only screen and (max-width: 600px) {
+            right: 15px;
+        }
+        .line {
+            fill: none;
+            transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
+            stroke: #fff;
+            stroke-width: 5.5;
+            stroke-linecap: round;
+        }
+        .top {
+            stroke-dasharray: 40 160;
+        }
+        .middle {
+            stroke-dasharray: 40 142;
+            transform-origin: 50%;
+            transition: transform 300ms;
+        }
+        .bottom {
+            stroke-dasharray: 40 85;
+            transform-origin: 50%;
+            transition: transform 300ms, stroke-dashoffset 300ms;
+        }
+
+        &.active {
+            transform: rotate(45deg);
+
+            .top {
+                stroke-dashoffset: -64px;
+            }
+            .middle {
+                //stroke-dashoffset: -20px;
+                transform: rotate(90deg);
+            }
+            .bottom {
+                stroke-dashoffset: -64px;
+            }
+        }
+    }
+
+    // .auth {
+    //     font-family: Calibri;
+    //     font-weight: 700;
+    //     font-size: 20px;
+    //     @include flexbox;
+    //     text-align: center;
+    //     align-items: center;
+    //     width: 50px;
+    //     height: 50px;
+    //     z-index: 100;
+    //     position: absolute;
+    //     right: 20px;
+    //     top: 12px;
+    //     @include anim(0.15s,0s);
+
+    //     &:hover {
+    //         background-color: $ACCENT;
+    //     }
+    // }
+}

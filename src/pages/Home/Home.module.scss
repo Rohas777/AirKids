@@ -1,0 +1,74 @@
+@import "./../../assets/scss/index";
+
+.home {
+    position: relative;
+    // transform: translateY(-$headerHeight);
+    // margin-bottom: -$headerHeight;
+    background-color: $BACKGROUND;
+    margin: 0px auto;
+
+    .slider {
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: $container;
+        margin: 0px auto;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+
+        @media only screen and (max-width: 1360px) {
+            width: $containerMedium;
+        }
+        @media only screen and (max-width: 990px) {
+            width: $containerSmall;
+        }
+        @media only screen and (max-width: 780px) {
+            width: $containerExtraSmall;
+        }
+    }
+
+    .schedule {
+        margin-bottom: 30px;
+    }
+
+    .banner1 {
+        margin-bottom: 20px;
+    }
+
+    .banner2 {
+        margin-bottom: 30px;
+    }
+
+    .newsSection {
+        margin-bottom: 80px;
+        @media only screen and (max-width: 780px) {
+            padding: 0 20px;
+        }
+    }
+
+    .championship {
+        margin-bottom: 62px;
+    }
+
+    .gallery {
+        margin-bottom: 50px;
+        @media only screen and (max-width: 780px) {
+            padding: 0 20px;
+        }
+    }
+
+    .blockTableImg {
+        width: 100%;
+        position: relative;
+        margin-bottom: 35px;
+        @media only screen and (max-width: 780px) {
+            padding: 0 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

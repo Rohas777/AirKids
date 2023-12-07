@@ -1,0 +1,39 @@
+
+[
+    {
+        "place": 1, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 2, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 0, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 3, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 0, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 4, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 0, 1, 0, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 5, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 6, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 0, 0, 0], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 7, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 8, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 9, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 10, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 11, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    },
+    {
+        "place": 12, "name": "ЦСКА", "city": "Москва", "games": 22, "victories": 22, "defeats": 0, "winRate": 100, "lastFive": [1, 1, 1, 1, 1], "scored": 2165, "missed": 1633, "difference": 532, "points": 44, "logo": "/img/teamLogos/CSKA.png"
+    }
+]

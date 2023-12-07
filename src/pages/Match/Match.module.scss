@@ -1,0 +1,158 @@
+@import "./../../assets/scss/index";
+
+.match {
+    margin-top: calc($headerHeight + 18px);
+    background-color: $BACKGROUND;
+
+    .container {
+        width: $container;
+        margin: 0px auto;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+        @media only screen and (max-width: 1360px) {
+            width: $containerMedium;
+        }
+        @media only screen and (max-width: 990px) {
+            width: $containerSmall;
+        }
+        @media only screen and (max-width: 780px) {
+            width: $containerExtraSmall;
+        }
+    }
+
+    .schedule {
+        margin-bottom: 30px;
+    }
+
+    .banner {
+        margin-bottom: 14px;
+    }
+
+    .wrapper {
+        background: #fff;
+        width: 100%;
+        box-shadow: 0px 0px 15px 0px #ccc;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .head {
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+        color: #000;
+        text-align: center;
+        font-family: Rubik;
+
+        .date {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 100%;
+            margin-bottom: 50px;
+        }
+
+        .faceToFace {
+            @include flexbox;
+            justify-content: center;
+            align-items: center;
+
+            .team {
+                @include flexbox;
+                flex-direction: column;
+                align-items: center;
+                width: 200px;
+                cursor: pointer;
+                border-radius: 10px;
+                @include anim(0.1s, 0s);
+                padding: 8px;
+                padding-bottom: 18px;
+
+                .teamLogo {
+                    width: 130px;
+                    height: 130px;
+                    margin-bottom: 8px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+
+                    img {
+                        @include anim(0.15s, 0s);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(1);
+
+                        &.height {
+                            height: 100%;
+                        }
+
+                        &.width {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .name {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 100%;
+                    margin-bottom: 5px;
+                    word-wrap: break-word;
+                }
+
+                .city {
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 133.333%;
+                    word-wrap: break-word;
+                }
+
+                &:hover {
+                    background-color: #ebe9e9;
+                }
+
+                &:active {
+                    background-color: $ACCENT;
+                }
+            }
+
+            .between {
+                @include flexbox;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                .score {
+                    @include flexbox;
+
+                    .points {
+                        width: 120px;
+                        font-size: 50px;
+                        font-weight: 700;
+                        line-height: 120%;
+                    }
+                    span {
+                        font-size: 50px;
+                        font-weight: 700;
+                        line-height: 40%;
+                        @include flexbox;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .condition {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 125%;
+                }
+            }
+        }
+    }
+}
